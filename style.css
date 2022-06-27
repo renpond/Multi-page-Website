@@ -5,7 +5,7 @@
 }
 
 body {
-  margin: 60px auto;
+  margin: 100px auto;
 }
 
 h1,
@@ -28,6 +28,8 @@ h3 {
 }
 
 p {
+  padding: 20px;
+  border-radius: 4px;
   font-size: 18px;
   line-height: 1.5;
 }
@@ -40,21 +42,37 @@ p {
 
 .navigation-links a {
   margin: 20px;
+}
+
+.primary-link {
+  background: var(--primary-color);
+  box-shadow: var(--box-shadow);
+  color: white;
   border-radius: 4px;
   padding: 20px 15px;
   text-decoration: none;
   text-transform: capitalize;
 }
 
-.contact-link {
-  background: var(--primary-color);
-  box-shadow: var(--box-shadow);
-  color: white;
+.primary-link:hover {
+  color: #f2a2ff;
+  border: 1px solid #f2a2ff;
+  transition: all 350ms ease-in-out;
 }
 
-.about-link {
+.secondary-link:hover {
+  color: #f2a2ff;
+  border: 1px solid #f2a2ff;
+  transition: all 350ms ease-in-out;
+}
+
+.secondary-link {
   color: var(--primary-color);
   border: 1px solid var(--primary-color);
+  border-radius: 4px;
+  padding: 20px 15px;
+  text-decoration: none;
+  text-transform: capitalize;
 }
 
 .homepage-link {
@@ -64,6 +82,7 @@ p {
 }
 
 .about-paragraphs {
+  display: flex;
   margin: 30px 0;
 }
 
@@ -80,15 +99,26 @@ p {
 }
 
 .email-link:hover {
-  text-decoration: underline;
+  color: #f2a2ff;
+  transition: all 350ms ease-in-out;
 }
 
-.primary-link {
-  border-radius: 4px;
-  padding: 20px 15px;
-  text-decoration: none;
-  text-transform: capitalize;
-  background: var(--primary-color);
-  color: white;
-  box-shadow: var(--box-shadow);
-}
+@media (max-width: 576px) {
+  h1 {
+    font-size: 48px;
+    line-height: 1.5;
+  }
+
+  h2 {
+    font-size: 32px;
+    text-align: center;
+  }
+  p {
+    text-align: center;
+  }
+
+  .project-link {
+    display: block;
+    text-align: center;
+    margin: 0 20px;
+  }
